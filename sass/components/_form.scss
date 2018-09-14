@@ -1,0 +1,23 @@
+.form {
+    &__input {
+        background-color: rgba($color-background-dark-1, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 1rem 2rem;
+        color: $color-text-light-1;
+        display: inline-block;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-background-dark-2, .1);
+            border-bottom: 3px solid $color-blue-1;
+        }
+        &:focus:invalid {
+            border-bottom: 3px solid $color-red-1;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        text-align: center;
+        border-radius: .3rem;
+        color: $color-text-light-1;
+        font-size: 1.3rem;
+        padding: 1rem 4rem;
+        margin: 1rem 0;
+        font-weight: 600;
+        background-color: $button-default;
+        @include box-shadow-2;
+        border: none;
+
+        @include respond(phone) {
+            width: 100%;
+            min-height: 3rem;
+            
+        }
+    }
+
+    &__cyan, 
+    &__orange,
+    &__lightblue {
+        min-width: 80%;
+        transition: all .2s;
+    }
+
+    &__cyan:hover {
+        background-color: $color-cyan-1;
+    }
+
+    &__orange:hover {
+        background-color: $color-orange-2;
+    }
+
+    &__lightblue:hover {
+        background-color: $color-lightblue-1;
+    }
+
+    &__disabled {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.6;
+    }
+
+    &__small {
+        min-width: 20%;
+    }
+}

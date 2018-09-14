@@ -1,0 +1,66 @@
+.header {
+    padding: 2rem 4rem;
+    &__title {
+        font-size: 3rem;
+        letter-spacing: 1.5rem;
+        font-weight: 400;
+        color: $color-header-1;
+        text-transform: uppercase;
+        display: inline-block;
+        border-right: 3px solid $color-background-dark-1;
+        text-align: center;
+
+        @include respond(tab-land) {
+            letter-spacing: 1.2rem;
+        }
+        @include respond(tab-port) {
+            letter-spacing: 1rem;
+            border-right: none;
+            border-bottom: 3px solid $color-background-dark-1;
+            font-size: 2.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+            letter-spacing: .5rem;
+        }
+    }
+
+    &__name {
+        padding: 0 2rem;
+        font-size: 2.5rem;
+        font-family: "Megrim";
+        color: $color-white-1;
+        letter-spacing: 1.5rem;
+        display: inline-block;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    &__primary {
+        padding: 1rem 0;
+        font-size: 2rem;
+        letter-spacing: 1rem;
+        font-weight: 400;
+        color: $color-header-1;
+        text-transform: uppercase;
+        display: inline-block;
+        border-bottom: 3px solid $color-background-dark-1;
+    }
+}
+
+.symbol {
+    font-size: 2rem;
+    padding: 0 2rem;
+    display: inline-block;
+
+    @include respond(phone) {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,145 @@
+.card {
+    display: inline-block;
+    margin: 3rem 0;
+    padding: 2rem 4rem;
+    border-radius: .3rem;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: all .2s;
+    min-height: 30rem;
+    position: relative;
+    @include box-shadow-1;
+
+    @include respond(tab-land) {
+        padding: 1rem 2rem;
+    }
+
+    &__period {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @include respond(phone) {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &:focus &__btn{
+        visibility: visible;
+    }
+
+    &:hover{
+        transform: translateY(-1rem) scale(1.03);
+    }
+
+    &__color-1{
+        background-color: $color-blue-1;
+    }
+
+    &__color-2{
+        background-color: $color-purple-1;
+    }
+
+    &__color-3{
+        background-color: $color-red-1;
+    }
+
+    &__color-4 {
+        background-color: $color-orange-1;
+    }
+
+
+    &__heading-primary {
+        font-size: 3rem;
+        font-weight: 300;
+        letter-spacing: .3rem;
+        padding: 1rem 3 2rem 3;
+
+        @include respond(phone) {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__heading-secondary {
+        padding: 2rem 0 0 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &__date {
+        display: table;
+        max-width: 100%;
+        table-layout: fixed;
+        
+        &--date {
+            font-size: 1.4rem;
+            width: 66.66666%;
+            display: table-cell;
+        }
+
+        &--calendar {
+            font-size: 6rem;
+            width: 33.33333%;
+            display: table-cell;
+            vertical-align: bottom;
+            padding: 0 1rem 0 0;
+        }
+    }
+
+    &__arrow {
+        &--checkbox {
+            display: none;
+        }
+        &-down {
+            font-size: 3rem;
+            text-align: center;
+            display: block;
+            color: $color-text-light-1;
+            padding: 2rem 1rem 1rem 1rem;
+            min-width: 80%;
+            cursor: pointer;
+        }
+
+            
+        &--checkbox:checked + &--btn {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+            transition: all .5s;
+        }
+        &--btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            text-align: center;
+            visibility: hidden;
+        }
+    }
+
+     // @include respond(phone) {
+        @media only screen and (max-width: 37.5em)
+            // for non hover screen    
+            {
+                &__arrow {
+                    &--checkbox {
+                        display: none;
+                    }
+                    &-down {
+                        display: none;
+                    }
+            
+                    &--btn {
+                        opacity: 1;
+                        visibility: visible;
+                        position: relative;
+                    }
+                }
+            }
+}
+
+.asd   {
+    width: 100%;
+    background-color: black;
+}
